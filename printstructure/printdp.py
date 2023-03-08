@@ -2,9 +2,9 @@ from tabulate import tabulate
 class DPTable:
     def __init__(self, data):
         if not isinstance(data, list):
-            raise ValueError('invalid argument type: {}'.format(type(data)))
+            raise TypeError('invalid argument type: {}'.format(type(data)))
         if not (all(isinstance(row, list) for row in data) or all(not isinstance(item, list) for item in data)):
-            raise ValueError('invalid DP table structure')
+            raise TypeError('invalid DP table structure')
         if isinstance(data[0], list):
             for row in data:
                 if len(row) != len(data[0]):
