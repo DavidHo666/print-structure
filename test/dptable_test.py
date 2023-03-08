@@ -1,10 +1,7 @@
 import pytest
 
-from printstructure import PrintStructure
 from printstructure.printdp import DPTable
-from printstructure.printtree import Tree
 
-from unittest import TestCase
 
 
 def test_valid_data_type():
