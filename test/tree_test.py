@@ -24,13 +24,13 @@ class Node_without_right:
 def test_invalide_node_without_left():
     node = Node_without_left(1, right=None)
     with pytest.raises(AttributeError):
-        tree = Tree(node)
+        Tree(node)
 
 
 def test_invalide_node_without_right():
     node = Node_without_right(1, left=None)
     with pytest.raises(AttributeError):
-        tree = Tree(node)
+        Tree(node)
 
 
 def test_print_tree(capsys):
