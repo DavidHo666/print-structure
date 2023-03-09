@@ -7,6 +7,7 @@ class PrintStructure:
     def print(data):
         if isinstance(data, list):
             dp = DPTable(data)
+
             dp.print_dp()
         else:
             tree = Tree(data)
