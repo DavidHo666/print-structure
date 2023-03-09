@@ -5,34 +5,34 @@ from printstructure.printdp import DPTable
 
 def test_valid_data_type():
     data = [1, 2, 3]
-    dp = DPTable(data)
+    DPTable(data)
 
 
 def test_invalid_data_type_tuple():
     with pytest.raises(TypeError):
         data = tuple([1, 2])
-        dp = DPTable(data)
+        DPTable(data)
 
 
 def test_valid_nested_data_type():
     data = [[1, 2, 3], [4, 5, 6]]
-    dp = DPTable(data)
+    DPTable(data)
 
 
 def test_invalid_nested_data_type():
     with pytest.raises(TypeError):
         data = [1, [1, 2]]
-        dp = DPTable(data)
+        DPTable(data)
 
 
 def test_inconsistant_row_lenght():
     with pytest.raises(ValueError):
         data = [[1], [1, 2]]
-        dp = DPTable(data)
+        DPTable(data)
 
 
 def test_2d_table_output(capsys):
-    data = data = [["a", "b", "c"], ["b", "c", "d"], [1, 2, 3]]
+    data = [["a", "b", "c"], ["b", "c", "d"], [1, 2, 3]]
     dp = DPTable(data)
     dp.print_dp()
     out, err = capsys.readouterr()
@@ -51,7 +51,7 @@ def test_2d_table_output(capsys):
 
 
 def test_1d_table_output(capsys):
-    data = data = [1, 2, 3]
+    data = [1, 2, 3]
     dp = DPTable(data)
     dp.print_dp()
     out, err = capsys.readouterr()
